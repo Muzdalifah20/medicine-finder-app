@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { fetchDrug } from "./API/fdaApi";
 import { extractDrugInfo } from "../utils/drugHelpers";
@@ -7,7 +7,7 @@ export default function SearchDrug() {
   const [query, setQuery] = useState("");
   const [drugInfo, setDrugInfo] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [hasSearched, setHasSearched] = useState(false); // NEW: Track if user searched
+  const [hasSearched, setHasSearched] = useState(false);
   const navigate = useNavigate();
 
   const handleSearch = async () => {
@@ -48,15 +48,10 @@ export default function SearchDrug() {
     }
   };
 
-  // Remove auto-search on mount
-  // useEffect(() => {
-  //   handleSearch();
-  // }, []);
-
   return (
     <div className="max-w-2xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
       <div className="text-center mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+        <h1 className="text-2xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
           💊 MedicineFinder
         </h1>
         <p className="text-xl text-gray-600">
@@ -105,7 +100,6 @@ export default function SearchDrug() {
         </div>
       )}
 
-      {/* Results - FIXED LOGIC */}
       {!loading && hasSearched && (
         <>
           {drugInfo ? (
@@ -113,28 +107,18 @@ export default function SearchDrug() {
             <div className="mt-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/50 overflow-hidden">
               <Link
                 to={`/drug/${encodeURIComponent(drugInfo.name || query)}`}
-                state={{ drugInfo }} // Pass data directly (optional fallback)
+                state={{ drugInfo }}
                 className="block p-8 hover:bg-blue-50 transition-all duration-300 group"
               >
-                <div className="flex items-start gap-6">
+                <div className="flex items-center gap-6">
                   <div className="p-4 bg-gradient-to-br from-green-100 to-blue-100 rounded-xl group-hover:scale-105 transition-transform">
                     <span className="text-3xl">💊</span>
                   </div>
 
                   <div className="flex-1 min-w-0">
-                    <h2 className="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2 truncate">
+                    <h2 className="text-sm sm:text-2xl lg:text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2 truncate">
                       {drugInfo.name || query}
                     </h2>
-                    {drugInfo.manufacturer && (
-                      <p className="text-lg text-gray-600 mb-4">
-                        🏭 {drugInfo.manufacturer}
-                      </p>
-                    )}
-                    {drugInfo.indications && (
-                      <p className="text-gray-700 leading-relaxed line-clamp-3">
-                        {drugInfo.indications}
-                      </p>
-                    )}
                   </div>
 
                   <div className="text-right flex-shrink-0">

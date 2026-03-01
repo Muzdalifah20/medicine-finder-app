@@ -3,7 +3,6 @@ export default function Footer() {
     <footer className="footer bg-gray-900/90 backdrop-blur-sm border-t border-gray-800/50  ">
       <div className="wrapper max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <nav className="header__nav flex flex-wrap justify-center md:justify-start md:items-center text-center md:text-left gap-5 md:gap-8 lg:gap-10">
-          {/* ZozoPharma Logo */}
           <a
             href="/"
             className="header__home font-bold text-xl md:text-2xl lg:text-3xl leading-none text-white no-underline flex-1 md:flex-none md:mr-auto md:font-black hover:text-blue-300 transition-colors"
@@ -29,7 +28,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/muzdalifah-suliman-29260a30a"
               className="header__social inline-block p-3 hover:scale-110 hover:bg-white/10 rounded-xl transition-all duration-300 group"
               aria-label="LinkedIn"
             >

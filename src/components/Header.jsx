@@ -3,7 +3,6 @@ export default function Header() {
     <header className="header relative z-10 mt-5 md:mt-8 lg:mt-10">
       <div className="wrapper max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="header__nav flex flex-wrap justify-center md:justify-start md:items-center text-center md:text-left gap-5 md:gap-8 lg:gap-10">
-          {/* ZozoPharma Logo */}
           <a
             href="/"
             className="header__home font-bold text-2xl md:text-3xl lg:text-4xl leading-none text-white no-underline flex-1 md:flex-none md:mr-auto md:font-black hover:text-blue-300 transition-colors"
@@ -28,7 +27,7 @@ export default function Header() {
           </a>
 
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/muzdalifah-suliman-29260a30a"
             className="header__social inline-block p-2 hover:scale-110 transition-transform"
             aria-label="LinkedIn"
           >
