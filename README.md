@@ -1,32 +1,59 @@
-Medicine Finder - Week 1
+Medicine Finder App README
 Overview
-Week 1 implementation of Medicine Finder app focusing on Navbar and Header components with React Router navigation.
+A React-based web application that connects to the FDA API to search for drugs, view detailed drug information, and manage user favorites. Features a modern UI with reusable components for navigation, search, and content display.
 
-Features
-Clean medical-themed navbar (logo + favorites/categories links)
+Key Features
+Drug Search: Search FDA database by drug name or keywords.
 
-Simple hero header with search placeholder
+Drug Details: View comprehensive drug information including dosage, side effects, warnings.
 
-Responsive design (mobile + desktop)
+Favorites: Save and manage favorite drugs for quick access.
 
-React Router setup (Home/Favorites/Categories routes)
+Responsive Design: Mobile-friendly interface with header, navbar, and footer.
 
-Tech Stack
-text
-React 18 + Vite
-Tailwind CSS
-React Router DOM 6
 Folder Structure
-text
+
 src/
 ├── components/
-│ ├── Navbar.jsx  
-│ └── Header.jsx  
-├── App.jsx  
-└── index.css
+│ ├── Header
+│ ├── Navbar
+│ ├── Home
+│ ├── DrugSearch
+│ ├── DrugDetails
+│ ├── Favorite
+│ ├── CollabsCard
+│ ├── Footer
+│ └── API/  
+│ └── fdaApi.js  
+├── utils/
+│ └── drugHelpers.js  
+│  
+└── App.jsx
 
-Installation
-bash
-npm install
-npm install react-router-dom
-npm run dev
+Core Functionality
+Home Page: Welcome screen with prominent search bar.
+
+Search: Query FDA API for drugs → display results.
+
+Drug Details: Click drug → view full FDA data.
+
+Favorites: Heart icon to save/remove drugs from list.
+
+Navigation: Consistent navbar across all pages.
+
+Tech Stack
+React: Frontend framework
+
+FDA API: Drug database
+
+CSS: Modern responsive styling using Tailwind CSS
+
+Local Storage: Favorites persistence
+
+Usage
+
+1. npm install
+2. npm start
+3. Search drugs via home page
+4. View details or add to favorites
+5. Access favorites anytime
