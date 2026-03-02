@@ -56,6 +56,10 @@ export default function SearchDrug() {
         <p className="text-xl text-gray-600">
           Search FDA-approved medications instantly
         </p>
+        <div class="text-xs text-gray-500 bg-gray-50 border border-gray-200 rounded-lg p-2 mb-4 max-w-sm mx-auto">
+          🔍 Search by <strong>active ingredient</strong> • Case-
+          <strong>sensitive</strong> • Spell correctly
+        </div>
       </div>
 
       {/* Search Form */}
