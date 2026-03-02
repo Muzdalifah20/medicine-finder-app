@@ -50,8 +50,8 @@ export default function SearchDrug() {
   return (
     <div className="max-[420px]:w-11/12 max-w-2xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
       <div className="text-center mb-8 mx-auto">
-        <h1 className="break-words text-3xl md:text-5xl font-serif tracking-tighter bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-          💊 MedicineFinder
+        <h1 className="  text-3xl md:text-5xl font-serif tracking-tighter bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+          MedicineFinder
         </h1>
         <p className="text-xl text-gray-600">
           Search FDA-approved medications instantly
