@@ -21,11 +21,10 @@ body {
   box-sizing: border-box;
 }
 
-@supports not (selector(:has(*))) {
-  html,
-  body {
-    overflow-x: clip !important;
-  }
+html,
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
