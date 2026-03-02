@@ -21,6 +21,13 @@ body {
   box-sizing: border-box;
 }
 
+@supports not (selector(:has(*))) {
+  html,
+  body {
+    overflow-x: clip !important;
+  }
+}
+
 a {
   font-weight: 500;
   color: #646cff;
