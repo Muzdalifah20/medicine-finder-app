@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { fetchDrug } from "./API/fdaApi";
 import { extractDrugInfo } from "../utils/drugHelpers";
 
@@ -8,10 +8,9 @@ export default function SearchDrug() {
   const [drugInfo, setDrugInfo] = useState(null);
   const [loading, setLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
-  const navigate = useNavigate();
 
   const handleSearch = async () => {
-    if (!query.trim()) return; // Don't search on empty input
+    if (!query.trim()) return;
 
     setLoading(true);
     setHasSearched(true);
@@ -49,9 +48,9 @@ export default function SearchDrug() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
-      <div className="text-center mb-8">
-        <h1 className="text-2xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+    <div className="max-[420px]:w-sm max-w-2xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+      <div className="text-center mb-8 mx-auto">
+        <h1 className=" text-3xl md:text-5xl font-serif tracking-tighter bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
           💊 MedicineFinder
         </h1>
         <p className="text-xl text-gray-600">
