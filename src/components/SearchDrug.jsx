@@ -71,7 +71,7 @@ export default function SearchDrug() {
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyPress}
             placeholder="e.g., acetaminophen, aspirin, ibuprofen..."
-            className="flex-1 px-6 py-4 text-lg border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 shadow-sm"
+            className="flex-1 px-6 py-4 text-blue-800 placeholder-gray-400 text-lg border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 shadow-sm"
             disabled={loading}
           />
 
