@@ -7,7 +7,7 @@ import Favorites from "./components/Favorites.jsx";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/medicine-finder-app">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
